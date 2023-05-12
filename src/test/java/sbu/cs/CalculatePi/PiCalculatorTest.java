@@ -16,13 +16,13 @@ class PiCalculatorTest {
 
     @Test
     void calculateSimple() {
-        String pi = piCalculator.calculate(2);
+        String pi = PiCalculator.calculate(2);
         assertEquals(pi, "3.14");
     }
 
     @Test
     void calculateNormal() {
-        String pi = piCalculator.calculate(7);
+        String pi = PiCalculator.calculate(7);
         assertEquals(pi, "3.1415926");
     }
 

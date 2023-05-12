@@ -1,5 +1,7 @@
 package sbu.cs.Semaphore;
 
+import java.util.concurrent.Semaphore;
+
 public class Controller {
 
     /**
@@ -18,11 +20,12 @@ public class Controller {
      */
 
     public static void main(String[] args) {
-        Operator operator1 = new Operator("operator1");
-        Operator operator2 = new Operator("operator2");
-        Operator operator3 = new Operator("operator3");
-        Operator operator4 = new Operator("operator4");
-        Operator operator5 = new Operator("operator5");
+        Semaphore S = new Semaphore(2, true);
+        Operator operator1 = new Operator("operator1", S);
+        Operator operator2 = new Operator("operator2", S);
+        Operator operator3 = new Operator("operator3", S);
+        Operator operator4 = new Operator("operator4", S);
+        Operator operator5 = new Operator("operator5", S);
 
         operator1.start();
         operator2.start();
